@@ -104,45 +104,6 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="botonSuma">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>300</y>
-      <width>75</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>SUMA</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="botonMulti">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>300</y>
-      <width>111</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>MULTIPLICACIÓN</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="botonDiv">
-    <property name="geometry">
-     <rect>
-      <x>760</x>
-      <y>300</y>
-      <width>75</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>DIVISIÓN</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
@@ -220,6 +181,52 @@
     <property name="text">
      <string>Resultado</string>
     </property>
+   </widget>
+   <widget class="QPushButton" name="botonCalcular">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>470</y>
+      <width>75</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Clacular</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>290</y>
+      <width>281</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QRadioButton" name="radioSum">
+       <property name="text">
+        <string>Suma</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="radioMulti">
+       <property name="text">
+        <string>Multiplicación</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="radioDiv">
+       <property name="text">
+        <string>División</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
