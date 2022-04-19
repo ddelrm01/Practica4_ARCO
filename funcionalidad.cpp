@@ -1,6 +1,10 @@
 #include "funcionalidad.h"
 
-int funcionalidad::convertRealToUnion(float number, float number2, int op){
+funcionalidad :: funcionalidad(){
+
+}
+
+int funcionalidad::convertRealToUnion(float numero, float numero2, int op){
     bool inf = false;
     bool NaN = false;
     float total;
@@ -9,37 +13,37 @@ int funcionalidad::convertRealToUnion(float number, float number2, int op){
     union Code op1;
     union Code op2;
     /* Convert the first number */
-    op1.numero = number;
-    op1.bitfield.sign;
-    op1.bitfield.expo;
+    op1.num = numero;
+    op1.bitfield.sig;
+    op1.bitfield.exp;
     op1.bitfield.partFrac;
 
     /* Convert the second number */
-    op2.numero = number2;
-    op2.bitfield.sign;
-    op2.bitfield.expo;
-    op2.bitfield.partFrac;
+    op1.num = numero2;
+    op1.bitfield.sig;
+    op1.bitfield.exp;
+    op1.bitfield.partFrac;
 
 
     switch (op) {
             case 0:{
-                if(op1.bitfield.expo>=255 || op2.bitfield.expo>=255){
+                if(op1.bitfield.exp>=255 || op2.bitfield.exp>=255){
                     /*inf*/
                     total = 0.0;
-                    if(op1.numero==-op2.numero){
+                    if(op1.num==-op2.num){
                         NaN = true;
                     }else{
                         inf = true  ;
                     }
                 }else{
-                    if (op1.numero == 0) {
-                        total = op2.numero;
+                    if (op1.num == 0) {
+                        total = op2.num;
                     }else{
-                        if (op2.numero == 0) {
-                            total = op1.numero;
+                        if (op2.num == 0) {
+                            total = op1.num;
                         }else{
-                            if(op1.numero!=-op2.numero){
-                                vectorIEEE = operationAddition(op1, op2);
+                            if(op1.num!=-op2.num){
+                                vectorIEEE = opSuma(op1, op2);
                                 total = binaryToDecimal(vectorIEEE);
                             }else{
                                 total = 0.0;
@@ -60,4 +64,6 @@ float funcionalidad:: binaryToDecimal(vector <int> v){
 }
 
 
+vector<int> funcionalidad::opSuma(union Code op1, union Code op2){
 
+}

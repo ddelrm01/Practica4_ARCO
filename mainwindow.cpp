@@ -19,7 +19,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_botonCalcular_clicked(){
     QMessageBox msg;
-    if(ui->radioSum->isChecked()== false || ui->radioMulti->isChecked()== false || ui->radioDiv->isChecked()== false){
+    if(ui->radioSum->isChecked()== false && ui->radioMulti->isChecked()== false && ui->radioDiv->isChecked()== false){
         msg.setText("Hay que seleccionar una opción.");
         msg.exec();
     }else{
@@ -27,17 +27,17 @@ void MainWindow::on_botonCalcular_clicked(){
             msg.setText("Hay que definir dos numeros reales.");
             msg.exec();
         }else{
-            funcionalidad *aux = new funcionalidad();
+            funcionalidad w;
 
             float nu = ui->op1Real->text().toFloat();
             float nu2 = ui->op2Real->text().toFloat();
 
             if (ui->radioSum->isChecked()) {
-                aux->convertRealToUnion(nu,nu2,0);
+                w.convertRealToUnion(nu,nu2,0);
             }else if (ui->radioMulti->isChecked()) {
-                aux->convertRealToUnion(nu, nu2,1);
+                w.convertRealToUnion(nu, nu2,1);
             }else if (ui->radioDiv->isChecked()) {
-                aux->convertRealToUnion(nu, nu2,2);
+                w.convertRealToUnion(nu, nu2,2);
             }
         }
     }

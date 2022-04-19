@@ -14,11 +14,11 @@ union Code {
 
     struct{
         unsigned int partFrac : 23;
-        unsigned int expo : 8;
-        unsigned int sign : 1;
+        unsigned int exp : 8;
+        unsigned int sig : 1;
     }bitfield;
 
-    float numero;
+    float num;
     unsigned int numerox;
 };
 
@@ -35,8 +35,10 @@ class funcionalidad : public QDialog
 public:
 
     /* MÉTODOS VARIOS */
+    funcionalidad();
     int convertRealToUnion(float number, float number2, int op);
     float binaryToDecimal(vector <int> v);
+    vector <int> opSuma(union Code op1, union Code op2);
 private:
     Ui::funcionalidad *ui;
 
@@ -54,9 +56,9 @@ private:
 
     struct{
           int sign;
-          vector<int>  exponent;
-          vector<int>  mantissa;
-          vector<int>  partfracc;
+          vector<int>  exponente;
+          vector<int>  mantisa;
+          vector<int>  partfrac;
     }result;
 };
 
